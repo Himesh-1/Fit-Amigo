@@ -1,0 +1,17 @@
+.background{
+    background: rgb(0,37,107);
+    background: linear-gradient(90deg, rgba(0,37,107,1) 1%, rgba(0,113,100,1) 51%, rgba(39,101,157,1) 96%);
+}
+
+.text1{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+}
+.text2{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font:bolder;
+    font-size: 13px;
+    font-weight: 600;
+    
+}

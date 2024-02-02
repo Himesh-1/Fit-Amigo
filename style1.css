@@ -1,0 +1,31 @@
+.gradient_bg{
+	background: linear-gradient(-50deg, #12486B,#713ABE,#793FDF,#614BC3,#102C57,#071952);
+	background-size: 180% 180%;
+	animation: gradient 10s ease infinite;
+	height: 80vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.white-text{
+    color:white;
+}
+
+.black-text{
+    color:black;
+    font-weight: bolder;
+}
+
+.scrollbar{
+	overflow-y: auto;
+    max-height: 18;}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMI Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(-50deg, #83A2FF,#B4BDFF,#FFE3BB,#614BC3,#FFD28F);
+	  background-size: 180% 180%;
+    }
+    .calculator {
+      background-color: #F3EEEA;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    input[type="number"] {
+      width: 180px;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    select {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    p {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .bmi-chart {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      padding: 5px;
+    }
+    .bar {
+      height: 20px;
+      border-radius: 8px;
+      transition: width 0.5s ease;
+    }
+    .underweight {
+      background-color: #ffc107;
+    }
+    .normal-weight {
+      background-color: #28a745;
+    }
+    .overweight {
+      background-color: #ff6b6b;
+    }
+    .obese {
+      background-color: #dc3545;
+    }
+    .bmi-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-top: 10px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <h2>BMI Calculator</h2>
+  <label for="weight">Weight:</label>
+  <input type="number" id="weight" placeholder="Enter your weight">
+  <select id="weightUnit">
+    <option value="kg">kg</option>
+    <option value="lbs">lbs</option>
+  </select><br>
+  <label for="height">Height:</label>
+  <input type="number" id="height" placeholder="Enter your height">
+  <select id="heightUnit">
+    <option value="cm">cm</option>
+    <option value="m">m</option>
+    <option value="ft">ft</option>
+    <option value="inch">inch</option>
+  </select><br>
+  <button onclick="calculateBMI()">Calculate BMI</button>
+  <p id="result"></p>
+
+  <div class="bmi-chart">
+    <div class="bar underweight"></div>
+    <div class="bar normal-weight"></div>
+    <div class="bar overweight"></div>
+    <div class="bar obese"></div>
+  </div>
+  <div class="bmi-labels">
+    <span>Underweight (&lt; 18.5)</span>
+    <span>Normal (18.5 - 24.9)</span>
+    <span>Overweight (25 - 29.9)</span>
+    <span>Obese (&ge; 30)</span>
+  </div>
+</div>
+
+<script>
+  function calculateBMI() {
+    const weight = parseFloat(document.getElementById('weight').value);
+    const height = parseFloat(document.getElementById('height').value);
+    const weightUnit = document.getElementById('weightUnit').value;
+    const heightUnit = document.getElementById('heightUnit').value;
+    let bmi;
+
+    if (weightUnit === 'lbs') {
+      // Convert weight from pounds to kilograms
+      bmi = (weight / 2.205); // 1 kg = 2.205 lbs
+    } else {
+      bmi = weight;
+    }
+
+    if (heightUnit === 'cm') {
+      // Calculate BMI for height in centimeters
+      bmi = bmi / ((height / 100) * (height / 100));
+    } else if (heightUnit === 'ft') {
+      // Convert height from feet and inches to meters
+      bmi = bmi / (((height * 30.48) / 100) * ((height * 30.48) / 100)); // 1 ft = 30.48 cm
+    } else if (heightUnit === 'inch') {
+      // Convert height from inches to meters
+      bmi = bmi / (((height * 2.54) / 100) * ((height * 2.54) / 100)); // 1 inch = 2.54 cm
+    } else {
+      // BMI calculated directly for height in meters
+      bmi = bmi / (height * height);
+    }
+
+    bmi = bmi.toFixed(2);
+    
+    let result = '';
+    if (!isNaN(bmi)) {
+      result = `Your BMI is: ${bmi}`;
+      if (bmi < 18.5) {
+        result += ' (Underweight)';
+        updateBar('underweight');
+      } else if (bmi >= 18.5 && bmi < 24.9) {
+        result += ' (Normal weight)';
+        updateBar('normal-weight');
+      } else if (bmi >= 25 && bmi < 29.9) {
+        result += ' (Overweight)';
+        updateBar('overweight');
+      } else {
+        result += ' (Obese)';
+        updateBar('obese');
+      }
+    } else {
+      result = 'Please enter valid values for weight and height.';
+    }
+    
+    document.getElementById('result').innerText = result;
+  }
+
+  function updateBar(className) {
+    const bars = document.querySelectorAll('.bar');
+    bars.forEach(bar => bar.style.width = '0');
+    document.querySelector(`.${className}`).style.width = '100%';
+  }
+</script>
+
+</body>
+</html>

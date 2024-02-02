@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[linear-gradient(-90deg,#35A29F,#088395,#35A29F)]">
+    <div class="flex justify-center py-16 ">
+    <form class="flex flex-col px-10 bg-[#F5F5F5] w-[550px] py-10 justify-center rounded-3xl lg:pr-10 lg:text-lg">
+        
+        <div class="text-4xl text-center font-[600] font-[arial,sans] pb-10">
+            Create
+            Account
+        </div>
+
+        <label class="font-medium pb-2">First Name</label>
+        <input class="rounded-lg mx-2 px-6 py-2 bg-gray-200 lg:pr-16 lg:py-1" placeholder="First Name" name="fname"><br>
+
+        <label class="font-medium pb-2">Last Name</label>
+        <input class="rounded-lg mx-2 px-6 py-2 bg-gray-200 lg:pr-16 lg:py-1" placeholder="Last Name" name="lname"><br>
+
+        <label class="font-medium pb-2">Age</label>
+        <input class="rounded-lg mx-2 px-6 py-2 bg-gray-200 lg:pr-16 lg:py-1" placeholder="Age" name="age"><br>
+        
+        <label class="font-medium pb-2">Your Email</label>
+        <input class="rounded-lg mx-2 px-6 py-2 bg-gray-200 lg:pr-16 lg:py-1" placeholder="Username" name="mail"><br>
+        
+        <label class="font-medium pb-2">Password</label>
+        <input class="rounded-lg mx-2 px-6 py-2 bg-gray-200 lg:pr-16 lg:py-1" placeholder="password">
+
+        <div class="py-6 text-sm">
+            <input type="checkbox" id="remember" name="remember" value="rememberme">
+            <label for="remember">I agree to the <span class="text-blue-600 cursor-pointer"><a href="www.google.com"><u>Terms & Conditions</u></a></span>and<span class="text-blue-600 cursor-pointer"><a href="www.google.com"><u>Privacy Policy</u></a></span></label></div>
+        
+        <button class="bg-blue-500 rounded-2xl  text-lg font-semibold text-white px-10 py-2">
+            CREATE
+        </button>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-9 sm:h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+  
+                <svg
+                  class="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+  
+                <svg
+                  class="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            >
+              <div class="hidden sm:ml-6 sm:block">
+              
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <ul class="flex space-x-3 text-[15px]">
+                  <li
+                    href="#"
+                    class="text-gray-300  hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                    aria-current="page"
+                    >Dashboard</li>
+                  
+                  <li
+                    href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                    >Team</li
+                  >
+                  <li
+                    href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                    >Projects</li
+                  >
+                  <li
+                    href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                    >Calendar</li
+                  >
+                  <ul class="flex text-[17px] pl-[390px]">
+                    <li class="mt-1 ">
+                      <button class="bg-blue-500 px-3 text-white rounded-full border-blue-500 border-2 hover:bg-transparent">Log In</button></li>
+                    <li class="mt-1 px-4">
+                      <button class=" px-3 text-white rounded-full border-blue-500 border-2 hover:bg-blue-400">Sign Up</button></li>
+                  </ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            >
+              <div
+                class="absolute right-0 z-2h-20 mt-2 w-48 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="user-menu-button"
+                tabindex="-1"
+              ></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              aria-current="page"
+              >Dashboard</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Team</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Projects</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Calendar</a
+            >
+          </div>
+        </div>
+    </nav>
+
+    <div class="flex  bg-[linear-gradient(rgba(130,90,120,0.5),rgba(130,90,120,0.5)),url(workout.jpg)] -z-10 h-[700px]"> 
+        <div class="text-white  drop-shadow-lg ">
+        <h1 class="font-extrabold py-16 text-[100px] ml-16">Fit-Amigo</h1>
+        <p class="font-bold text-[70px] pl-72">
+            <i>Redesign Your Fitness,<br>
+            Achieve Your Best Self!</i>
+        </p>
+    </div>
+    </div>
+
+    <div class="bg-[#526D82] text-center ">
+        <h1 class="text-white drop-shadow-lg font-bold text-5xl pt-20  font-mono">
+          Embracing Fitness:<br>Strengthening Body, Mind, and Community
+        </h1>
+
+        <p class="text-white text-2xl px-72 py-20 font-light">
+          Regular engagement in fitness and workouts brings multifaceted benefits, transcending mere physical improvements. Beyond sculpting the body and enhancing strength, exercise contributes significantly to mental health by reducing stress, boosting mood, and sharpening cognitive abilities. It fortifies the cardiovascular system, reducing risks of chronic diseases, and enhances overall physical well-being. Moreover, workouts instill discipline and perseverance, fostering a sense of accomplishment and self-confidence as fitness goals are attained. Beyond personal growth, exercise often becomes a social endeavor, fostering connections and a sense of community, whether through group classes, team sports, or workout partnerships. In essence, fitness is a holistic journey that not only transforms the body but also enriches mental resilience, emotional well-being, and social connections.
+        </p>
+    </div>
+
+    <div class=" bg-[linear-gradient(rgba(150,200,250,0.9),rgba(150,200,250,0.9)),url(workout2.jpg)] bg-cover -z-10 h-[700px]">
+      <div class="text-center">
+        <h1 class="font-extrabold text-slate-900 text-center drop-shadow-lg py-16 text-[100px] ">WORKOUTS</h1>
+      </div>
+
+      <div class="flex justify-around ">
+
+        <div class="overflow-hidden cursor-pointer h-[400px] m-[50px] shadow-[5px,5px,20px,black]">
+          <img src="images/chest.png" class="h-[400px] w-[350px] rounded-2xl ">
+          <div class="h-[200px] w-[350px] p-2 box-border absolute bg-[rgba(27,27,27,0.5)] text-white ">
+            <h1 class="mx-10 text-4xl ml-5 pb-5 font-semibold">Chest</h1>
+            <p class="text-xl ml-7">Forge your path with a chest that defines resilience.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden cursor-pointer">
+          <img src="images/back.jpg" class="h-[400px] w-[370px] rounded-2xl">
+          <div class="absolute bg-gray-600 text-white w-[370px] ">
+            <h1 class="mx-10 text-4xl ml-5 pb-5 font-semibold">Back</h1>
+            <p class="text-xl ml-7">Strength lies in the depth of your back.</p>
+          </div>
+        </div>
+
+        <div class="z-10 ">
+            <div>
+          <img src="images/legs.jpg" class="h-[400px] w-[370px] rounded-2xl">
+          
+            <h1>Chest</h1>
+            <p>Forge your path with a chest that defines resilience.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class=" bg-[linear-gradient(rgba(150,200,250,0.9),rgba(150,200,250,0.9)),url(workoutbg.jpg)] h-[720px] bg-current bg-no-repeat">
+      
+      <div class="sm:grid sm:grid-cols-3 sm:grid-rows-[repeat(3,minmax(0,1fr))] pl-20 pt-32">
+
+        <div class="z-10 ">
+          <img src="images/shoulders.jpg" class="h-[400px] w-[370px] rounded-2xl">
+          <div>
+            <h1>Chest</h1>
+            <p>Forge your path with a chest that defines resilience.</p>
+          </div>
+        </div>
+
+        <div class="z-10 ">
+          <img src="images/arms.jpg" class="h-[400px] w-[370px] rounded-2xl">
+          <div class="">
+            <h1>Chest</h1>
+            <p>Forge your path with a chest that defines resilience.</p>
+          </div>
+        </div>
+
+        <div class="z-10 ">
+          <img src="images/core.jpg" class="h-[400px] w-[370px] rounded-2xl">
+          <div>
+            <h1>Chest</h1>
+            <p>Forge your path with a chest that defines resilience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-yellow-200 h-[500px]">
+      <h1 class="text-center font-black text-7xl pt-20 text-blue-950">Wake up and Workout</h1>
+
+    </div>
+ 
+        
+    
+</body>
+</html>

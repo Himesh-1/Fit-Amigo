@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="logincss.css">
+</head>
+<body class="bg-[linear-gradient(-90deg,#E48586,#FCBAAD,#E48586)] ">
+    <div class="flex justify-center mt-32 ">
+        <form class="bg-[#DCBFFF] px-10 pt-10 pb-10 rounded-md lg:pr-10 lg:text-lg">
+            <label class="text1">Sign In</label><br><br>
+            <label class="text2">USERNAME</label><br>
+            <input class="rounded-full mx-2 mt-2 px-6 mb-5 bg-gray-200 lg:pr-16 lg:py-1" placeholder="Username" name="fname"><br>
+            <label class="text2">PASSWORD</label><br>
+            <input class="rounded-full mx-2 mt-2 px-6 mb-5 bg-gray-200 lg:pr-16 lg:py-1" placeholder="password"><br>
+            <button class="relative bg-orange-400 mx-2 px-[90px] transition ease-in-out hover:scale-105 rounded-full mb-6 lg:py-1 lg:px-[116px]">Sign In</button>
+            <div>
+                <input type="checkbox" id="remember" name="remember" value="rememberme">
+                <label for="remember">Remember Me</label><br>
+                <a class="mt-2 mx-2 " href="www.google.com">Forgot Password ?</a>
+            </div>
+        </form>
+
+        <div class="hidden lg:block rounded-md bg-[linear-gradient(#713ABE,#9D76C1)] justify-center px-20 pt-28">
+            <h1 class="text-4xl font-normal font-[cursive,IndieFlower] pb-5 rounded-md">Welcome to login</h1>
+            <h1 class="text-center text-lg">Don't have an account?</h1> 
+            <div>
+                <button class="ml-24 mt-5 px-5 py-3 text-white rounded-full border-white border transition ease-in-out delay-150 hover:scale-95 hover:bg-white hover:text-black">Sign Up
+                </button>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

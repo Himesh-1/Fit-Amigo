@@ -1,0 +1,27 @@
+.card{
+    height: 500px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+
+.intro{
+    height: 200px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgba(27, 27, 27, 0.5);
+    color: white;
+    bottom: 37px;
+}
+
+img{
+    height: 500px;
+    width: 350px;
+    border-radius: 3px;
+}
+
+.card:hover{
+    cursor: pointer;
+}

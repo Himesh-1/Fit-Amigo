@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrition Planner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    div {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: inline-block;
+      width: 120px;
+    }
+
+    input, select {
+      width: 200px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nutrition Planner</h1>
+  
+  <div>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter your weight">
+  </div>
+  
+  <div>
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter your height">
+  </div>
+  
+  <div>
+    <label for="goal">Select Goal:</label>
+    <select id="goal">
+      <option value="lose">Lose Weight</option>
+      <option value="maintain">Maintain Weight</option>
+      <option value="gain">Gain Weight</option>
+    </select>
+  </div>
+  
+  <button onclick="calculateNutrition()">Calculate</button>
+  
+  <div id="result"></div>
+
+  <script>
+    function calculateNutrition() {
+      const weight = parseFloat(document.getElementById('weight').value);
+      const height = parseFloat(document.getElementById('height').value);
+      const goal = document.getElementById('goal').value;
+
+      if (isNaN(weight) || isNaN(height)) {
+        document.getElementById('result').innerText = 'Please enter valid weight and height.';
+        return;
+      }
+
+      const bmi = calculateBMI(weight, height);
+      const nutritionPlan = generateNutritionPlan(bmi, goal);
+
+      document.getElementById('result').innerText = nutritionPlan;
+    }
+
+    function calculateBMI(weight, height) {
+      return weight / ((height / 100) * (height / 100));
+    }
+
+    function generateNutritionPlan(bmi, goal) {
+      let message = '';
+
+      // Implement your nutrition calculation logic based on BMI and user's goal
+      // For simplicity, let's create a basic example:
+      if (goal === 'lose') {
+        // Modify nutrition for weight loss
+        message = 'Sample Nutrition Plan for Weight Loss';
+        // Add your calculations or suggestions here for weight loss
+      } else if (goal === 'maintain') {
+        // Maintain current nutrition
+        message = 'Sample Nutrition Plan for Weight Maintenance';
+        // Add your calculations or suggestions here for weight maintenance
+      } else if (goal === 'gain') {
+        // Modify nutrition for weight gain
+        message = 'Sample Nutrition Plan for Weight Gain';
+        // Add your calculations or suggestions here for weight gain
+      }
+
+      return message;
+    }
+  </script>
+</body>
+</html>

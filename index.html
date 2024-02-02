@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="main.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body class="bg-[#FAF6F0]">
+    <nav class="bg-gray-800">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+
+              <svg
+                class="block h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+
+              <svg
+                class="hidden h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="hidden sm:ml-6 sm:block">
+            
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <ul class="flex space-x-3 text-[15px]">
+                <li
+                  class="text-gray-300  hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                  aria-current="page"
+                  ><a href="cooking.html">Cooking</a></li>
+                
+                <li
+                  href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                  ><a href="baking1.html">Baking</a></li
+                >
+                <li
+                  href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                  ><a href="workout1.html">Fitness</a></li
+                >
+                <li
+                  href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                  ><a href="bmi.html">BMI</a></li
+                >
+                <ul class="flex text-[17px] pl-[390px]">
+                  <li href="loginpage.html" class="mt-1 ">
+                    <button class="bg-blue-600 px-3 text-white rounded-full border-blue-500 border-2 hover:bg-transparent"><a href="loginpage.html">Log In</a></button></li>
+                  <li class="mt-1 px-4">
+                    <button class=" px-3 text-white rounded-full border-blue-500 border-2 hover:bg-blue-400"><a href="signup.html">Sign Up</a></button></li>
+                </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <div
+              class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="user-menu-button"
+              tabindex="-1"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            aria-current="page"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Team</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Calendar</a
+          >
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="gradient_bg hide">
+      <div class=" ">
+        <div class="text-[#FFFFDD] text-center">
+          <h1 class="font-bold text-7xl pt-40 ">
+            Your health,
+            Your way,<br>
+            Together</h1>
+          <p class="text-lg pt-10 pl-2">
+            Empower your wellness journey with<br>
+            personalized health,fitness,and diet plans at <span class="font-bold">Fit-Amigo</span>
+          </p>
+        </div>
+        <div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class=" h-[100vh] hide">
+      <div class="flex justify-around">
+        <div class="pt-24  ">
+          <h1 class="text-4xl font-medium text-blue-950">
+            How We Support <br>Your Wellness
+          </h1>
+          <p class="w-64 pt-3 text-lg text-gray-950">
+            At Fit Amigo, we offer personalized diet plans, diverse fitness routines, expert yoga guidance, a recipe database, progress tracking tools, and a supportive community. Your journey to wellness starts here!
+          </p>
+        </div>
+
+        <div class="pt-5">
+          <ul class="grid grid-cols-3 grid-rows-2 text-center w-[800px] ">
+            <li
+              href="#"
+              class="bg-[#C7E9B0] box-border shadow-md hover:bg-[#7AA874] rounded-2xl px-4 font-medium hover:text-white pt-4 pb-16 mx-3 my-3"
+              aria-current="page">
+              <h1 class="font-bold text-lg text-blue-950 pb-3">Personalized Diet Plans</h1>
+              <p>Tailored weekly, monthly, or daily meal plans based on individual health goals and preferences</p>
+            </li>
+
+            <li
+              href="#"
+              class="bg-[#C7E9B0] box-border shadow-md hover:bg-[#7AA874] rounded-2xl px-4 font-medium hover:text-white pt-4 pb-10 mx-3 my-3"
+              aria-current="page">
+              <h1 class="font-bold text-lg text-blue-950 pb-3">Yoga and Meditation Guidance</h1>
+              <p>Offering routines and techniques for mental and physical well-being</p>
+            </li>
+
+            <li
+              href="#"
+              class="bg-[#C7E9B0] box-border shadow-md hover:bg-[#7AA874] rounded-2xl px-4 font-medium hover:text-white pt-4 pb-10 mx-3 my-3"
+              aria-current="page">
+              <h1 class="font-bold text-lg text-blue-950 pb-3">Recipe Database</h1>
+              <p>Access to a diverse range of healthy and delicious recipes, complementing the personalized diet plans</p>
+            </li>
+
+            <li
+              href="#"
+              class="bg-[#C7E9B0] box-border shadow-md hover:bg-[#7AA874] rounded-2xl px-4 font-medium hover:text-white pt-4 pb-10 mx-3 my-3"
+              aria-current="page">
+              <h1 class="font-bold text-lg text-blue-950 pb-3">Progress Tracking and Analysis</h1>
+              <p>Tools to monitor and analyze personal progress in health and fitness goals</p>
+            </li>
+
+            <li
+              href="#"
+              class="bg-[#C7E9B0] box-border shadow-md hover:bg-[#7AA874] rounded-2xl px-4 font-medium hover:text-white pt-4 pb-10 mx-3 my-3"
+              aria-current="page">
+              <h1 class="font-bold text-lg text-blue-950 pb-3">Community Support</h1>
+              <p>Engaging users in a supportive community, facilitating discussions, and sharing experiences and tips</p>
+            </li>
+
+            <li
+              href="#"
+              class="bg-[#C7E9B0] box-border shadow-md hover:bg-[#7AA874] rounded-2xl px-4 font-medium hover:text-white pt-4 pb-10 mx-3 my-3"
+              aria-current="page">
+              <h1 class="font-bold text-lg text-blue-950 pb-3">Personalized Diet Plans</h1>
+              <p>Tailored weekly, monthly, or daily meal plans based on individual health goals and preferences.</p>
+            </li>
+            
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+
+    <div class="flex flex-col text-center h-96 mt-36 hide">
+      <h1 class="text-7xl pb-10">
+        ABOUT US
+      </h1>
+
+      <p class="text-lg px-36">
+        Celebrating individuality in the pursuit of holistic wellness, Fit Amigo is more than a platform; it's a supportive community dedicated to your well-being journey. Founded on the belief that personalized guidance is key to achieving sustainable health goals, we offer tailored diet plans, diverse fitness routines, expert yoga guidance, a treasure trove of nutritious recipes, and tools for tracking your progress. At Fit Amigo, we are committed to empowering you with the resources and support needed to thrive in your pursuit of a healthier, happier life. Join us as we embark together on the path to wellness, embracing every unique step along the way.
+      </p>
+    </div>
+
+    
+    
+    <div class="pt-5 bg-[#F0DBAF] h-[550px] hide">
+      <h1 class="text-center text-7xl pb-20 font-medium">What People Say</h1>
+      <ul class="flex text-center justify-between px-16">
+        <li
+          href="#"
+          class="bg-[#F3EEEA] box-border shadow-md rounded-2xl px-4 font-medium pt-4 pb-16 mx-3 my-3"
+          aria-current="page">
+          <p>"Fit Amigo nailed it! Customized plans, great workouts, and a recipe stash that made healthy eating a breeze. A+!"</p>
+          <h1 class="font-bold text-lg text-blue-950 pt-5">- Sam K</h1>
+        </li>
+
+        <li
+          href="#"
+          class="bg-[#F3EEEA] box-border shadow-md rounded-2xl px-4 font-medium pt-4 pb-16 mx-3 my-3"
+          aria-current="page">
+          <p>"Fit Amigo rocks! Personalized plans, diverse workouts, and a fantastic recipe collection. Loving it!"</p>
+          <h1 class="font-bold text-lg text-blue-950 pt-5">- Maya S</h1>
+        </li>
+
+        <li
+          href="#"
+          class="bg-[#F3EEEA] box-border shadow-md rounded-2xl px-4 font-medium pt-4 pb-16 mx-3 my-3"
+          aria-current="page">
+          <p>"Fit Amigo is a game-changer! Tailored plans, fun exercises, and a supportive community. Highly recommend!"</p>
+          <h1 class="font-bold text-lg text-blue-950 pt-5">- Max R</h1>
+        </li>
+        </ul>
+        </div>
+
+
+    <div class="text-center py-20">
+      <h1 class="text-4xl px-20 font-semibold text-blue-950">"Embark on your personalized wellness journey today and experience the transformative power of Fit Amigo!"</h1>
+    </div>
+
+    <div class="h-[700px] hide">
+      <div class="h-[500px] bg-[#D0A2F7] rounded-b-[80px] rounded-t-3xl">
+        <div class="text-center font-medium text-white drop-shadow-lg text-lg pt-16">
+          <h1>WHY CHOOSE US</h1>
+          <h2 class="text-4xl pt-8 px-8">Fit Amigo stands out by offering tailored wellness solutions that prioritize your individual needs</h2>
+        </div>
+
+        <div class="mt-28">
+          <ul class="flex text-center justify-evenly px-60">
+            <li
+              href="#"
+              class="bg-[#F4BF96] text-white drop-shadow-lg box-border shadow-md rounded-2xl px-4 font-medium pt-4 pb-16 mx-3 my-3"
+              aria-current="page">
+              <h1 class="font-bold text-2xl text-blue-950 pb-3">Easy Management</h1>
+              <p>Simplify your journey to wellness with Fit Amigo's effortless management tools designed to support your health goals at every step.</p>
+            </li>
+
+            <li
+              href="#"
+              class="bg-[#F4BF96] text-white drop-shadow-lg box-border shadow-md rounded-2xl px-4 font-medium pt-4 pb-16 mx-3 my-3"
+              aria-current="page">
+              <h1 class="font-bold text-2xl text-blue-950 pb-3">Privacy</h1>
+              <p>Rest assured in your privacy while achieving your fitness aspirations with Fit Amigo, committed to safeguarding your personal information.</p>
+            </li>
+
+            <li
+              href="#"
+              class="bg-[#F4BF96] text-white drop-shadow-lg box-border shadow-md rounded-2xl px-4 font-medium pt-4 pb-16 mx-3 my-3"
+              aria-current="page">
+              <h1 class="font-bold text-2xl text-blue-950 pb-3">24/7 Help Support</h1>
+              <p>Get unparalleled support day or night with Fit Amigo's 24/7 assistance, ensuring you're never alone on your path to better health and fitness.</p>
+            </li></ul></div>
+      </div>
+    </div>
+    
+  
+  </body>
+</html>
