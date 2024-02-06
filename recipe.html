@@ -1,0 +1,50 @@
+<!-- recipe.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row" id="recipe-details"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Retrieve recipe details from query parameters
+            var title = getParameterByName('title');
+            var ingredients = getParameterByName('ingredients');
+            var servings = getParameterByName('servings');
+            var instructions = getParameterByName('instructions');
+
+            // Display recipe details
+            displayRecipe(title, ingredients, servings, instructions);
+        });
+
+        function getParameterByName(name) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function displayRecipe(title, ingredients, servings, instructions) {
+            var recipeHtml = `
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${title}</h5>
+                            <p class="card-text">Ingredients: ${ingredients}</p>
+                            <p class="card-text">Servings: ${servings}</p>
+                            <p class="card-text">Instructions: ${instructions}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('#recipe-details').html(recipeHtml);
+        }
+    </script>
+</body>
+</html>
