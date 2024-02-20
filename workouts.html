@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,6 +13,7 @@
     />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <script defer src="main.js"></script>
 </head>
 <body>
@@ -142,7 +144,7 @@
     </div>
   </nav>
 
-    <div class="flex hide bg-[linear-gradient(rgba(130,90,120,0.5),rgba(130,90,120,0.5)),url(workout.jpg)] -z-10 h-[700px]"> 
+  <div class="flex hide bg-[linear-gradient(rgba(130,90,120,0.5),rgba(130,90,120,0.5)),url(workout.jpg)] -z-10 h-[700px]"> 
         <div class="text-white  drop-shadow-lg ">
         <h1 class="font-extrabold py-16 text-[100px] ml-16">Fit-Amigo</h1>
         <p class="font-bold text-[70px] pl-72">
@@ -150,7 +152,7 @@
             Achieve Your Best Self!</i>
         </p>
     </div>
-    </div>
+  </div>
 
     <div class="bg-[#526D82] hide text-center ">
         <h1 class="text-white drop-shadow-lg font-bold text-5xl pt-20  font-mono">
@@ -162,74 +164,95 @@
         </p>
     </div>
 
-    <div class=" bg-[linear-gradient(rgba(150,200,250,0.9),rgba(150,200,250,0.9)),url(workout2.jpg)] hide bg-cover -z-10 h-[700px]">
+    <div class=" bg-[linear-gradient(rgba(150,200,250,0.9),rgba(150,200,250,0.9)),url(workout2.jpg)] hide bg-cover -z-10 h-[1700px]">
       <div class="text-center">
         <h1 class="font-extrabold text-slate-900 text-center drop-shadow-lg py-16 text-[100px] ">WORKOUTS</h1>
       </div>
 
-      <div class="sm:grid sm:grid-cols-3 sm:grid-rows-[repeat(3,minmax(0,1fr))] pl-20">
-
-        <div class="overflow-hidden hide cursor-pointer">
-          <img src="images/chest.png" class="h-[400px] w-[370px] rounded-2xl ">
-          <div >
-            <h1 class="mx-10 text-4xl ml-5 pb-5 font-semibold">Chest</h1>
-            <p class="text-xl ml-7">Forge your path with a chest that defines resilience.</p>
-          </div>
+      <div class="container mt-5 ">
+        <div class="row mb-3 justify-center">
+            <div class="ml-52 col-md-6">
+                <input id="query1" type="text" class="form-control pl-10 border border-black" placeholder="Enter Workout Name">
+            </div>
+            <div class="col-md-3">
+                <button id="search-btn2" class="btn btn-primary"><a href="#down">Search</a></button>
+            </div>
         </div>
-
-        <div class="overflow-hidden hide cursor-pointer">
-          <img src="images/back.jpg" class="h-[400px] w-[370px] rounded-2xl">
-          <div >
-            <h1 class="mx-10 text-4xl ml-5 pb-5 font-semibold">Back</h1>
-            <p class="text-xl ml-7">Strength lies in the depth of your back.</p>
-          </div>
-        </div>
-
-        <div class="z-10 overflow-hidden hide cursor-pointer">
-          <img src="images/legs.jpg" class="h-[400px] w-[370px] rounded-2xl">
-          <div >
-            <h1 class="mx-10 text-4xl ml-5 pb-5 font-semibold">Legs</h1>
-            <p class="text-xl ml-7">Legs that endure, take you further.</p>
-          </div>
-        </div>
-
-      </div>
     </div>
 
-    <div class=" bg-[linear-gradient(rgba(150,200,250,0.9),rgba(150,200,250,0.9)),url(workoutbg.jpg)] h-[720px] bg-current bg-no-repeat">
-      
-      <div class="sm:grid sm:grid-cols-3 sm:grid-rows-[repeat(3,minmax(0,1fr))] pl-20 pt-32">
+      <div class="grid grid-cols-2 grid-rows-[repeat(2,minmax(0,1fr))] py-5 sm:grid-cols-3 sm:grid-rows-[repeat(2,minmax(0,1fr))] h-[1400px] mx-9  sm:pl-12  rounded-t-[80px] rounded-b-[60px] ">
 
-        <div class="z-10 overflow-hidden hide cursor-pointer">
-          <img src="images/shoulders.jpg" class="h-[400px] w-[370px] rounded-2xl">
-          <div >
-            <h1 class="mx-10 text-4xl ml-5 pb-5 font-semibold">Shoulders</h1>
-            <p class="text-xl ml-7">Shoulders, the mark of resilience.</p>
+        <div class="card rounded-3xl hide cursor-pointer h-[550px] transition ease-in-out delay-[50ms] hover:scale-105" style="width: 22rem;">
+          <img src="images/chest.png" class="card-img-top rounded-b-md rounded-t-3xl h-[350px]" alt="...">
+          <div class="card-body ">
+            <h5 class=" text-4xl  pt-2 font-semibold">Chest</h5>
+            <p class="text-xl pt-3">Forge your path with a chest that defines resilience.</p>
+            <a href="#down" data-query="chest" class="btn btn-secondary my-2 ml-[25%] transition ease-in-out delay-[50ms] hover:scale-90 ">GO</a>
+            
           </div>
         </div>
 
-        <div class="z-10 hide overflow-hidden cursor-pointer">
-          <img src="images/arms.jpg" class="h-[400px] w-[370px] rounded-2xl">
-          <div >
-            <h1 class="mx-10 text-4xl ml-5 pb-5 font-semibold">Arms</h1>
-            <p class="text-xl ml-7">Strong arms, the manifestation of hard work.</p>
+        <div class="card rounded-3xl hide cursor-pointer h-[550px] transition ease-in-out delay-[50ms] hover:scale-105" style="width: 22rem;">
+          <img src="images/back.jpg" class="card-img-top rounded-b-md rounded-t-3xl h-[350px]" alt="...">
+          <div class="card-body ">
+            <h5 class="text-4xl pt-2 font-semibold">Back</h5>
+            <p class="text-xl pt-3">Strength lies in the depth of your back.</p>
+            <a href="#down" data-query="back" class="btn btn-secondary my-2 ml-[25%] transition ease-in-out delay-[50ms] hover:scale-90 ">GO</a>
+            
           </div>
         </div>
 
-        <div class="z-10 hide overflow-hidden cursor-pointer">
-          <img src="images/core.jpg" class="h-[400px] w-[370px] rounded-2xl">
-          <div >
-            <h1 class="mx-10 text-4xl ml-5 pb-5 font-semibold">Core</h1>
-            <p class="text-xl ml-7">Core strength, the root of resilience.</p>
+        <div class="card rounded-3xl hide cursor-pointer h-[550px] transition ease-in-out delay-[50ms] hover:scale-105" style="width: 22rem;">
+          <img src="images/legs.jpg" class="card-img-top rounded-b-md rounded-t-3xl h-[350px]" alt="...">
+          <div class="card-body ">
+            <h5 class="text-4xl pt-2 font-semibold">Legs</h5>
+            <p class="text-xl pt-3">Legs that endure, take you further.</p>
+            <a href="#down" data-query="legs" class="btn btn-secondary my-2 ml-[25%] transition ease-in-out delay-[50ms] hover:scale-90 ">GO</a>
+            
           </div>
         </div>
+
+        <div class="card rounded-3xl hide cursor-pointer h-[550px] transition ease-in-out delay-[50ms] hover:scale-105" style="width: 22rem;">
+          <img src="images/shoulders.jpg" class="card-img-top rounded-b-md rounded-t-3xl h-[350px]" alt="...">
+          <div class="card-body ">
+            <h5 class="text-4xl pt-2 font-semibold">Shoulders</h5>
+            <p class="text-xl pt-3">Shoulders, the mark of resilience.</p>
+            <a href="#down" data-query="shoulders" class="btn btn-secondary my-2 ml-[25%] transition ease-in-out delay-[50ms] hover:scale-90 ">GO</a>
+            
+          </div>
+        </div>
+
+        <div class="card rounded-3xl hide cursor-pointer h-[550px] transition ease-in-out delay-[50ms] hover:scale-105" style="width: 22rem;">
+          <img src="images/arms.jpg" class="card-img-top rounded-b-md rounded-t-3xl h-[350px]" alt="...">
+          <div class="card-body ">
+            <h5 class="text-4xl pt-2 font-semibold">Arms</h5>
+            <p class="text-xl pt-3">Strong arms, the manifestation of hard work.</p>
+            <a href="#down" data-query="arms" class="btn btn-secondary my-2 ml-[25%] transition ease-in-out delay-[50ms] hover:scale-90 ">GO</a>
+            
+          </div>
+        </div>
+
+        <div class="card rounded-3xl hide cursor-pointer h-[550px] transition ease-in-out delay-[50ms] hover:scale-105" style="width: 22rem;">
+          <img src="images/core.jpg" class="card-img-top rounded-b-md rounded-t-3xl h-[350px]" alt="...">
+          <div class="card-body ">
+            <h5 class="text-4xl pt-2 font-semibold">Core</h5>
+            <p class="text-xl pt-3">Core strength, the root of resilience.</p>
+            <a href="#down" data-query="core" class="btn btn-secondary my-2 ml-[25%] transition ease-in-out delay-[50ms] hover:scale-90 ">GO</a>
+            
+          </div>
+        </div>
+
+
       </div>
-    </div>
+
 
     <div class="bg-yellow-200 h-[550px] text-center">
       <h1 class=" font-black text-7xl pt-20 text-blue-950">Wake up and Workout</h1>
       <p class="text-5xl pt-32 ">"Embrace the dawn, seize the day, sweat it out in your own way!"</p>
+    </div>
 
+    <div id="down" class="flex">
+      <div id="workouts"></div>
     </div>
 
 
@@ -271,7 +294,7 @@
       </div>
     </section>
  
-        
+    <script src="1.js"></script>
     
-</body>
+  </body>
 </html>
