@@ -104,7 +104,7 @@ $(document).ready(function() {
         exercises.forEach(function(exercise) {
             var recipeHtml = `
                 <div class="grid grid-cols-1 grid-rows-[repeat(1,minmax(0,1fr))]  mb-4">
-                    <div class="card mx-5 px-4 pt-4 pb-10 my-3 rounded-3xl">
+                    <div class="card bg-[#CDFADB] mx-5 px-4 pt-4 pb-10 my-3 rounded-3xl">
                         <div class="card-body">
                             <h5 class="card-title font-bold underline">${exercise.name}</h5>
                             </br>
