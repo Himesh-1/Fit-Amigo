@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FIT-AMIGO</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="choice.css" />
     <link
@@ -12,6 +12,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="logo1.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -82,11 +83,37 @@
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
                 ><a href="baking1.html">Baking</a></li
               >
-              <li
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
-                ><a href="workouts.html">Fitness</a></li
-              >
+              <div class="relative inline-block text-left">
+                  <div>
+                    <button type="button" class="text-gray-300 inline-flex w-full justify-center gap-x-1.5 rounded-mdtext-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                      Fitness
+                      <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                
+                  <!--
+                    Dropdown menu, show/hide based on menu state.
+                
+                    Entering: "transition ease-out duration-100"
+                      From: "transform opacity-0 scale-95"
+                      To: "transform opacity-100 scale-100"
+                    Leaving: "transition ease-in duration-75"
+                      From: "transform opacity-100 scale-100"
+                      To: "transform opacity-0 scale-95"
+                  -->
+                  <div class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-gray-700 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div class="py-1 " role="none">
+                      <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                      <a href="workouts.html" class="text-gray-300 block px-4 py-2 text-sm hover:text-white hover:bg-gray-500 hover:scale-100 " role="menuitem" tabindex="-1" id="menu-item-0">Workouts</a>
+                      <a href="yoga.html" class="text-gray-300 block px-4 py-2 text-sm hover:text-white hover:bg-gray-500 hover:scale-100 " role="menuitem" tabindex="-1" id="menu-item-1">Yoga</a>
+                      <a href="plans.html" class="text-gray-300 block px-4 py-2 text-sm hover:text-white hover:bg-gray-500 hover:scale-100 " role="menuitem" tabindex="-1" id="menu-item-2">Diet Plans</a>
+                  
+                    </div>
+                  </div>
+                </div>
+                
               <li
                 href="#"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
@@ -142,7 +169,6 @@
       </div>
     </div>
   </nav>
-
 
     <div class="text-white text-4xl text-justify font-bold drop-shadow-lg sm:py-14 sm:px-8 sm:text-7xl ">
         <p>
@@ -376,5 +402,25 @@
     </section>
 
     <script src="1.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      // Get the button and dropdown menu elements
+      const button = document.getElementById('menu-button');
+      const menu = document.querySelector('[role="menu"]');
+  
+      // Toggle the dropdown menu when the button is clicked
+      button.addEventListener('click', function() {
+          menu.classList.toggle('hidden');
+      });
+  
+      // Close the dropdown menu when clicking outside of it
+      document.addEventListener('click', function(event) {
+          if (!menu.contains(event.target) && !button.contains(event.target)) {
+              menu.classList.add('hidden');
+          }
+      });
+  });
+  
+    </script>
 </body>
 </html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT-AMIGO</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="logo1.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="main.js"></script>
+</head>
+<body class="bg-[#FFE3CA]">
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button
+            type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+
+            <svg
+              class="block h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+
+            <svg
+              class="hidden h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+        >
+          <div class="hidden sm:ml-6 sm:block">
+          
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <ul class="flex space-x-3 text-[15px]">
+                <li
+                class="text-gray-300  hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                aria-current="page"
+                ><a href="index.html">Home</a></li>
+              <li
+                class="text-gray-300  hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                aria-current="page"
+                ><a href="he.html">Cooking</a></li>
+              
+              <li
+                href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                ><a href="baking1.html">Baking</a></li
+              >
+              <div class="relative inline-block text-left">
+                  <div>
+                    <button type="button" class="text-gray-300 inline-flex w-full justify-center gap-x-1.5 rounded-mdtext-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                      Fitness
+                      <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                
+                  <!--
+                    Dropdown menu, show/hide based on menu state.
+                
+                    Entering: "transition ease-out duration-100"
+                      From: "transform opacity-0 scale-95"
+                      To: "transform opacity-100 scale-100"
+                    Leaving: "transition ease-in duration-75"
+                      From: "transform opacity-100 scale-100"
+                      To: "transform opacity-0 scale-95"
+                  -->
+                  <div class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-gray-700 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div class="py-1 " role="none">
+                      <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                      <a href="workouts.html" class="text-gray-300 block px-4 py-2 text-sm hover:text-white hover:bg-gray-500 hover:scale-100 " role="menuitem" tabindex="-1" id="menu-item-0">Workouts</a>
+                      <a href="yoga.html" class="text-gray-300 block px-4 py-2 text-sm hover:text-white hover:bg-gray-500 hover:scale-100 " role="menuitem" tabindex="-1" id="menu-item-1">Yoga</a>
+                      <a href="plans.html" class="text-gray-300 block px-4 py-2 text-sm hover:text-white hover:bg-gray-500 hover:scale-100 " role="menuitem" tabindex="-1" id="menu-item-2">Diet Plans</a>
+                  
+                    </div>
+                  </div>
+                </div>
+                
+              <li
+                href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                ><a href="bmi.html">BMI</a></li
+              >
+              <ul class="flex text-[17px] pl-[390px]">
+                <li href="loginpage.html" class="mt-1 ">
+                  <button class="bg-blue-600 px-3 text-white rounded-full border-blue-500 border-2 hover:bg-transparent"><a href="loginpage.html">Log In</a></button></li>
+                <li class="mt-1 px-4">
+                  <button class=" px-3 text-white rounded-full border-blue-500 border-2 hover:bg-blue-400"><a href="signup.html">Sign Up</a></button></li>
+              </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+        >
+          <div
+            class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="user-menu-button"
+            tabindex="-1"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <a
+          href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+          aria-current="page"
+          >Dashboard</a
+        >
+        <a
+          href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >Team</a
+        >
+        <a
+          href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >Projects</a
+        >
+        <a
+          href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >Calendar</a
+        >
+      </div>
+    </div>
+  </nav>
+
+      <div class="text-center text-7xl font-bold mt-3">
+        <h1>DAILY DIET PLANS</h1>
+      </div>
+      <section class="gain">
+        <div class="text-6xl font-semibold pl-8">
+            <h1>Weight Gain -</h1>
+        </div>
+        <div class="card bg-[#9BCF53] rounded-[50px] text-white p-10 mt-5 mx-5 drop-shadow-lg">
+            <h1 class="text-5xl underline drop-shadow-lg">
+                PLAN 1: Vegetarian Diet
+            </h1>
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Total Daily Nutritional Information:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Calories: ~2700-3100</li>
+                <li>Protein: ~100-120g</li>
+                <li>Protein: ~100-120g</li>
+                <li>Protein: ~100-120g</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Breakfast:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Scrambled tofu with vegetables (bell peppers, onions, spinach)</li>
+                <li>Whole-grain toast with avocado</li>
+                <li>1 cup of soy milk</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Lunch:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Lentil soup or dal</li>
+                <li>Brown rice</li>
+                <li>Steamed broccoli and carrots</li>
+                <li>Mixed green salad with chickpeas</li>
+            </ul>
+
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Snacks:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">Greek yogurt with mixed berries and granola</ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Dinner:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Vegetarian chili with kidney beans, black beans, and corn</li>
+                <li>Quinoa or whole-grain bread</li>
+                <li>Steamed green beans or asparagus</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Before Bed:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">Almond milk protein shake with banana</ul>
+
+        </div>
+
+        <div class="card bg-[#C68484] rounded-[50px] text-white p-10 mt-5 mx-5 drop-shadow-lg">
+            <h1 class="text-5xl underline drop-shadow-lg">
+                PLAN 2: Non-Veg Diet
+            </h1>
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Total Daily Nutritional Information:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Calories: ~2700-3100</li>
+                <li>Protein: ~140-160g</li>
+                <li>Protein: ~100-120g</li>
+                <li>Protein: ~200-250g</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Breakfast:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>2 whole eggs omelette with cheese and spinach</li>
+                <li>Whole-grain toast with almond butter</li>
+                <li>1 cup of whole milk</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Lunch:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Grilled chicken breast</li>
+                <li>Quinoa or brown rice</li>
+                <li>Steamed vegetables (broccoli, carrots, bell peppers)</li>
+                <li>Mixed green salad with olive oil and vinegar dressing</li>
+            </ul>
+
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Snacks:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">Cottage cheese with pineapple chunks</ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Dinner:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Baked salmon fillet</li>
+                <li>Sweet potato or whole-grain pasta</li>
+                <li>Steamed asparagus or green beans</li>
+                <li>Side salad with avocado</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Before Bed:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">Whey protein shake with whole milk</ul>
+
+        </div>
+      </section>
+
+
+      <section class="loose">
+        <div class="text-6xl font-semibold pl-8">
+            <h1>Weight Loss -</h1>
+        </div>
+        <div class="card bg-[#8CB9BD] rounded-[50px] text-white p-10 mt-5 mx-5 drop-shadow-lg">
+            <h1 class="text-5xl underline drop-shadow-lg">
+                PLAN 1: Balanced Weight Loss Diet
+            </h1>
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Total Daily Nutritional Information:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Calories: ~1200-1500</li>
+                <li>Protein: ~50-60g</li>
+                <li>Protein: ~40-50g</li>
+                <li>Protein: ~150-180g</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Breakfast:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Greek yogurt with mixed berries and a sprinkle of chia seeds</li>
+                <li>Whole-grain toast with avocado slices</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Lunch:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Grilled chicken or tofu salad with mixed greens, cherry tomatoes, cucumber, and balsamic vinaigrette dressing</li>
+            </ul>
+
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Snacks:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">Carrot sticks with hummus</ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Dinner:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Baked salmon or roasted chickpeas with quinoa and steamed broccoli</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Before Bed:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">Herbal tea or a small piece of fruit (e.g., apple or orange)</ul>
+
+        </div>
+
+        <div class="card bg-[#8CB9BD] rounded-[50px] text-white p-10 mt-5 mx-5 drop-shadow-lg">
+            <h1 class="text-5xl underline drop-shadow-lg">
+                PLAN 2: Low-Carb Weight Loss Diet
+            </h1>
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Total Daily Nutritional Information:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Calories: ~1200-1500</li>
+                <li>Protein: ~50-60g</li>
+                <li>Protein: ~50-60g</li>
+                <li>Protein: ~50-70g</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Breakfast:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Spinach and mushroom omelette cooked with olive oil</li>
+                <li>Sliced avocado</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Lunch:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Grilled shrimp or tofu with a side of sautéed spinach and bell peppers</li>
+            </ul>
+
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Snacks:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">Celery sticks with almond butter</ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Dinner:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">
+                <li>Zucchini noodles (zoodles) with marinara sauce and grilled chicken or tempeh</li>
+            </ul>
+
+            <h1 class="p-3 text-xl drop-shadow-lg text-black underline">Before Bed:</h1>
+            <ul class="list-disc pl-16 text-lg drop-shadow-lg text-black">Unsweetened almond milk or herbal tea</ul>
+
+        </div>
+      </section>
+
+
+
+      <section id="footer">
+        <div class="container">
+          <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <h5>Quick links</h5>
+              <ul class="list-unstyled quick-links">
+                <li><a href="index.html"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <h5>Quick links</h5>
+              <ul class="list-unstyled quick-links">
+                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>X</a></li>
+                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Instagram</a></li>
+                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Facebook</a></li>
+                <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Discord</a></li>
+                
+              </ul>
+            </div>
+          </div>
+          
+            <hr>
+          </div>  
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+              
+              <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">FIT-AMIGO</a></p>
+            </div>
+            </hr>
+          </div>  
+        </div>
+      </section>
+
+
+
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get the button and dropdown menu elements
+        const button = document.getElementById('menu-button');
+        const menu = document.querySelector('[role="menu"]');
+    
+        // Toggle the dropdown menu when the button is clicked
+        button.addEventListener('click', function() {
+            menu.classList.toggle('hidden');
+        });
+    
+        // Close the dropdown menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    });
+    
+      </script>
+      
+</body>
+</html>

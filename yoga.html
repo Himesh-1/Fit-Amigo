@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="logo1.png" type="image/x-icon">
+    <title>FIT-AMIGO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+</head>
+<body class="bg-[#9AD0C2]">
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button
+            type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+
+            <svg
+              class="block h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+
+            <svg
+              class="hidden h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+        >
+          <div class="hidden sm:ml-6 sm:block">
+          
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <ul class="flex space-x-3 text-[15px]">
+                <li
+                class="text-gray-300  hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                aria-current="page"
+                ><a href="index.html">Home</a></li>
+              <li
+                class="text-gray-300  hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                aria-current="page"
+                ><a href="he.html">Cooking</a></li>
+              
+              <li
+                href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                ><a href="baking1.html">Baking</a></li
+              >
+              <div class="relative inline-block text-left">
+                  <div>
+                    <button type="button" class="text-gray-300 inline-flex w-full justify-center gap-x-1.5 rounded-mdtext-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                      Fitness
+                      <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                
+                  <!--
+                    Dropdown menu, show/hide based on menu state.
+                
+                    Entering: "transition ease-out duration-100"
+                      From: "transform opacity-0 scale-95"
+                      To: "transform opacity-100 scale-100"
+                    Leaving: "transition ease-in duration-75"
+                      From: "transform opacity-100 scale-100"
+                      To: "transform opacity-0 scale-95"
+                  -->
+                  <div class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-gray-700 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div class="py-1 " role="none">
+                      <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                      <a href="workouts.html" class="text-gray-300 block px-4 py-2 text-sm hover:text-white hover:bg-gray-500 hover:scale-100 " role="menuitem" tabindex="-1" id="menu-item-0">Workouts</a>
+                      <a href="yoga.html" class="text-gray-300 block px-4 py-2 text-sm hover:text-white hover:bg-gray-500 hover:scale-100 " role="menuitem" tabindex="-1" id="menu-item-1">Yoga</a>
+                      <a href="plans.html" class="text-gray-300 block px-4 py-2 text-sm hover:text-white hover:bg-gray-500 hover:scale-100 " role="menuitem" tabindex="-1" id="menu-item-2">Diet Plans</a>
+                  
+                    </div>
+                  </div>
+                </div>
+                
+              <li
+                href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium"
+                ><a href="bmi.html">BMI</a></li
+              >
+              <ul class="flex text-[17px] pl-[390px]">
+                <li href="loginpage.html" class="mt-1 ">
+                  <button class="bg-blue-600 px-3 text-white rounded-full border-blue-500 border-2 hover:bg-transparent"><a href="loginpage.html">Log In</a></button></li>
+                <li class="mt-1 px-4">
+                  <button class=" px-3 text-white rounded-full border-blue-500 border-2 hover:bg-blue-400"><a href="signup.html">Sign Up</a></button></li>
+              </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+        >
+          <div
+            class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="user-menu-button"
+            tabindex="-1"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <a
+          href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+          aria-current="page"
+          >Dashboard</a
+        >
+        <a
+          href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >Team</a
+        >
+        <a
+          href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >Projects</a
+        >
+        <a
+          href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+          >Calendar</a
+        >
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex hide bg-[linear-gradient(rgba(130,90,120,0.5),rgba(130,90,120,0.5)),url(yoga1.jpg)] bg-cover z-10 h-[600px] "> 
+        <div class="text-white  drop-shadow-lg ">
+        <h1 class="font-extrabold py-16 text-[100px] ml-16">Fit-Amigo</h1>
+        <p class="font-bold text-[70px] pl-60">
+            <i>Discover Tranquility:<br>
+              Yoga for Mind, Body, and Soul</i>
+        </p>
+    </div>
+  </div>
+
+    <div class=" hide text-center rounded-b-[50px] bg-[#9BCF53]">
+        <h1 class="text-white drop-shadow-lg font-bold text-5xl pt-20  font-mono">
+          Elevate Your Life:<br> Embracing the Holistic Benefits of Yoga
+        </h1>
+
+        <p class="text-white text-2xl px-64 py-20 font-medium drop-shadow-lg">
+          Regular engagement in fitness and workouts brings multifaceted benefits, transcending mere physical improvements. Beyond sculpting the body and enhancing strength, exercise contributes significantly to mental health by reducing stress, boosting mood, and sharpening cognitive abilities. It fortifies the cardiovascular system, reducing risks of chronic diseases, and enhances overall physical well-being. Moreover, workouts instill discipline and perseverance, fostering a sense of accomplishment and self-confidence as fitness goals are attained. Beyond personal growth, exercise often becomes a social endeavor, fostering connections and a sense of community, whether through group classes, team sports, or workout partnerships. In essence, fitness is a holistic journey that not only transforms the body but also enriches mental resilience, emotional well-being, and social connections.
+        </p>
+    </div>
+
+    <div class="text-center font-extrabold text-6xl p-16">
+      <h1>Explore Your Practice: <br>Dive Into These Transformative Yoga Poses</h1>
+    </div>
+
+    <div class="card bg-[#C68484] rounded-3xl hide text-black py-10 mt-3">
+      <h1 class="font-bold text-4xl pl-5 underline">Surya Namaskar (Sun Salutation)</h1>
+      <div class="grid grid-cols-2 gap-20 text-3xl">
+        <div>
+          <img class="w-[800px] rounded-3xl ml-10 mt-3 border border-black h-[500px]" src="Surya-Namaskar.webp">
+        </div>
+        <div class="mt-4 "><p class="pr-5 "><span class="font-bold text-4xl">About the Pose:</span><br>Surya Namaskar, or Sun Salutation, is a sequence of yoga poses performed in a flowing sequence. It is traditionally practiced in the morning to greet the sun and awaken the body and mind. Each round of Sun Salutation consists of the following poses:</p></div>
+      </div>
+      <div class="pt-3 pr-5">
+        <ul class="text-xl ml-28 list-decimal ">
+          <li><span class="font-bold ">Mountain Pose (Tadasana):</span>  Stand tall with your feet together, arms at your sides.</li>
+          <li><span class="font-bold ">Upward Salute (Urdhva Hastasana):</span> Inhale as you reach your arms overhead, palms facing each other.</li>
+          <li><span class="font-bold ">Forward Fold (Uttanasana):</span>  Exhale as you hinge at the hips and fold forward, reaching your hands towards the floor or your shins.</li>
+          <li> <span class="font-bold ">Half Forward Fold (Ardha Uttanasana):</span> Inhale as you lift your torso halfway, lengthening your spine and gazing forward.</li>
+          <li><span class="font-bold ">Plank Pose:</span> Exhale as you step or jump back into a plank position, aligning your wrists under your shoulders and your body in a straight line.</li>
+          <li><span class="font-bold ">Chaturanga Dandasana (Four-Limbed Staff Pose):</span> Lower down halfway, keeping your elbows close to your body.</li>
+          <li><span class="font-bold ">Upward-Facing Dog (Urdhva Mukha Svanasana): </span>Inhale as you straighten your arms and lift your chest, keeping your thighs off the mat.</li>
+          <li><span class="font-bold ">Downward-Facing Dog (Adho Mukha Svanasana):</span> Exhale as you lift your hips towards the ceiling, forming an inverted V shape with your body.</li>
+          <li><span class="font-bold ">Half Forward Fold (Ardha Uttanasana):</span> Inhale as you step or jump your feet forward between your hands, lifting your torso halfway.</li>
+          <li><span class="font-bold ">Forward Fold (Uttanasana): </span>Exhale as you fold forward, releasing your head towards your shins.</li>
+          <li><span class="font-bold ">Upward Salute (Urdhva Hastasana): </span>Inhale as you sweep your arms overhead and come to standing, palms together.</li>
+          <li><span class="font-bold ">Mountain Pose (Tadasana):</span> Exhale as you bring your arms back down to your sides, standing tall and grounded.</li>
+        </ul>
+      </div>
+
+      
+    </div>
+
+    <div class="card bg-[#C68484] rounded-3xl text-black py-10 hide mt-3">
+      <h1 class="font-bold text-4xl pl-5 underline">Downward-Facing Dog (Adho Mukha Svanasana)</h1>
+      <div class="grid grid-cols-2 gap-0">
+        <div>
+          <img class="w-[600px] rounded-3xl ml-10 mt-3 border border-black" src="Downward-Facing-Dog.jpeg">
+        </div>
+        <div class="flex flex-col text-xl pr-5">
+          <div class="mt-5"><p><span class="font-bold text-2xl">Benefits:</span> Stretches the shoulders, hamstrings, calves, and hands. Strengthens the arms and legs. Improves circulation and digestion. Relieves stress and energizes the body.</p></div>
+          <div class="mt-4"><p><span class="font-bold text-2xl">About the Pose:</span> Downward-Facing Dog is a foundational yoga pose commonly used in various yoga sequences. It resembles an inverted "V" shape with the hips lifted towards the ceiling and the hands and feet firmly grounded.</p></div>
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-3xl pl-10 py-3 ">Instructions:</h1>
+      </div>
+      <div>
+        <ul class="text-xl ml-28 list-decimal">
+          <li> Start on your hands and knees in a tabletop position with your wrists aligned under your shoulders and your knees under your hips.</li>
+          <li> Press firmly through your palms and toes as you lift your hips towards the ceiling, straightening your arms and legs.</li>
+          <li> Engage your core muscles to lengthen your spine and draw your heels toward the floor.</li>
+          <li> Keep your head in line with your upper arms, relaxing your neck and gaze towards your feet or belly button.</li>
+          <li> Hold the pose for 5-10 breaths, breathing deeply and evenly.</li>
+          <li> To release, gently lower your knees to the mat and rest in Child's Pose or transition into the next pose. </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="card bg-[#C68484] rounded-3xl hide text-black py-10 mt-3">
+      <h1 class="font-bold text-4xl pl-5 underline">Tree Pose (Vrikshasana)</h1>
+      <div class="grid grid-cols-2 gap-0">
+        
+        <div class="flex flex-col text-xl pl-5">
+          <div class="mt-5"><p><span class="font-bold text-2xl">Benefits:</span> Improves balance and concentration. Strengthens the legs, ankles, and core muscles. Stretches the thighs, groin, torso, and shoulders. Calms the mind and enhances focus.</p></div>
+          <div class="mt-4"><p><span class="font-bold text-2xl">About the Pose:</span> Tree Pose is a standing balancing pose that mimics the graceful stability of a tree. It involves grounding one foot firmly into the mat while placing the opposite foot on the inner thigh or calf, with arms stretched overhead in a prayer position or reaching towards the sky.</p></div>
+        </div>
+        <div>
+          <img class="w-[600px] rounded-3xl ml-10 mt-3 border border-black h-[350px]" src="tree-pose-vriksasana.jpg">
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-3xl pl-10 py-3 ">Instructions:</h1>
+      </div>
+      <div>
+        <ul class="text-xl ml-28 list-decimal">
+          <li>Begin standing tall with your feet hip-width apart and arms by your sides.</li>
+          <li>Shift your weight onto your left foot and root it firmly into the ground.</li>
+          <li> Bend your right knee and place the sole of your right foot either on your inner left thigh (above the knee) or below the knee on your calf, avoiding direct pressure on the knee joint.</li>
+          <li> Engage your core muscles and lengthen your spine. Find a focal point to help maintain balance.</li>
+          <li> Bring your palms together in front of your chest in a prayer position or extend your arms overhead with your palms facing each other.</li>
+          <li> Hold the pose for 30 seconds to 1 minute, breathing steadily.</li>
+          <li>Release the pose by lowering your right foot back to the floor and returning to standing position.</li>
+          <li>Repeat on the opposite side.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-[#C68484] rounded-3xl text-black py-10 hide mt-3">
+      <h1 class="font-bold text-4xl pl-5 underline">Warrior II Pose (Virabhadrasana II)</h1>
+      <div class="grid grid-cols-2 gap-0">
+        <div>
+          <img class="w-[600px] rounded-3xl ml-10 mt-3 border border-black" src="warrior2.jpg">
+        </div>
+        <div class="flex flex-col text-xl pr-5">
+          <div class="mt-5"><p><span class="font-bold text-2xl">Benefits:</span> Strengthens the legs, arms, and core. Improves stamina and concentration. Stretches the hips, groins, and shoulders. Builds focus and stability.</p></div>
+          <div class="mt-4"><p><span class="font-bold text-2xl">About the Pose:</span>Warrior II Pose is a powerful standing yoga pose that symbolizes strength, courage, and determination. It involves opening the hips and chest while maintaining a strong and steady stance.</p></div>
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-3xl pl-10 py-3 ">Instructions:</h1>
+      </div>
+      <div>
+        <ul class="text-xl ml-28 list-decimal">
+          <li> Begin standing at the top of your mat with your feet hip-width apart. Step your right foot back about 3-4 feet, turning your right foot out to a 90-degree angle and keeping your left foot pointing forward.</li>
+          <li> Align your front heel with the arch of your back foot. Your front heel should be in line with the middle of your back arch.</li>
+          <li> Extend your arms parallel to the floor, with your palms facing down. Keep your shoulders relaxed and away from your ears.</li>
+          <li> Bend your left knee directly over your left ankle, ensuring it does not go past your toes.</li>
+          <li> Gaze over your left fingertips, keeping your head in line with your spine.</li>
+          <li> Press firmly through the outer edge of your back foot and engage your thigh muscles.</li>
+          <li>Hold the pose for 30 seconds to 1 minute, breathing deeply.</li>
+          <li>To release, straighten your front leg and step your feet back together at the top of your mat. Repeat on the opposite side.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-[#C68484] rounded-3xl hide text-black py-10 mt-3">
+      <h1 class="font-bold text-4xl pl-5 underline">Bridge Pose (Setu Bandhasana)</h1>
+      <div class="grid grid-cols-2 gap-0">
+        
+        <div class="flex flex-col text-xl pl-5">
+          <div class="mt-5"><p><span class="font-bold text-2xl">Benefits:</span> Strengthens the back, buttocks, and thighs. Stretches the chest, neck, and spine. Improves digestion and alleviates stress and anxiety.</p></div>
+          <div class="mt-4"><p><span class="font-bold text-2xl">About the Pose:</span>  Bridge Pose is a rejuvenating backbend that helps to open the chest and improve posture. It is often practiced to counteract the effects of sitting for long periods and to release tension in the back and shoulders.</p></div>
+        </div>
+        <div>
+          <img class="w-[600px] rounded-3xl ml-10 mt-3 border border-black h-[350px]" src="bridge.webp">
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-3xl pl-10 py-3 ">Instructions:</h1>
+      </div>
+      <div>
+        <ul class="text-xl ml-28 list-decimal">
+          <li>Lie on your back with your knees bent and feet hip-width apart, flat on the floor, heels close to your buttocks.</li>
+          <li>Rest your arms by your sides, palms facing down.</li>
+          <li> Press your feet and arms into the floor as you lift your hips towards the ceiling.</li>
+          <li> Keep your thighs parallel to each other and engage your glutes and core muscles.</li>
+          <li> Roll your shoulders underneath you and interlace your fingers, pressing your arms and hands into the ground for support.</li>
+          <li> Lengthen your tailbone towards your knees to maintain the natural curve of your lower back.</li>
+          <li>Hold the pose for 30 seconds to 1 minute, breathing deeply.</li>
+          <li>To release, slowly lower your hips back down to the floor and hug your knees into your chest for a gentle stretch.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-[#C68484] rounded-3xl text-black py-10 hide mt-3">
+      <h1 class="font-bold text-4xl pl-5 underline">Child's Pose (Balasana)</h1>
+      <div class="grid grid-cols-2 gap-0">
+        <div>
+          <img class="w-[600px] rounded-3xl ml-10 mt-3 border border-black" src="Childs-Pose.webp">
+        </div>
+        <div class="flex flex-col text-xl pr-5">
+          <div class="mt-5"><p><span class="font-bold text-2xl">Benefits:</span>  Relieves tension in the back, shoulders, and chest. Stretches the spine, hips, thighs, and ankles. Calms the mind and promotes relaxation.</p></div>
+          <div class="mt-4"><p><span class="font-bold text-2xl">About the Pose:</span>  Child's Pose is a restorative yoga pose often used as a resting position during yoga practice. It gently stretches the back and hips while promoting a sense of surrender and relaxation.</p></div>
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-3xl pl-10 py-3 ">Instructions:</h1>
+      </div>
+      <div>
+        <ul class="text-xl ml-28 list-decimal">
+          <li> Begin on your hands and knees in a tabletop position, with your wrists aligned under your shoulders and your knees under your hips.</li>
+          <li> Bring your big toes together and separate your knees hip-width apart.</li>
+          <li> Exhale as you lower your hips towards your heels, allowing your forehead to rest on the mat.</li>
+          <li> Extend your arms forward, placing your palms on the mat or resting them alongside your body with your palms facing up.</li>
+          <li> Relax your shoulders and lengthen your spine, allowing your torso to melt towards the floor.</li>
+          <li>Close your eyes and focus on your breath, breathing deeply into your back body.</li>
+          <li>Hold the pose for 1-3 minutes, or longer if desired, maintaining a steady and even breath.</li>
+          <li>To release, gently press into your palms and lift your torso back up to a tabletop position.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-[#C68484] rounded-3xl hide text-black py-10 mt-3">
+      <h1 class="font-bold text-4xl pl-5 underline">Corpse Pose (Savasana)</h1>
+      <div class="grid grid-cols-2 gap-0">
+        
+        <div class="flex flex-col text-xl pl-5">
+          <div class="mt-5"><p><span class="font-bold text-2xl">Benefits:</span> Promotes deep relaxation and stress relief. Reduces fatigue and anxiety. Improves concentration and mental clarity.</p></div>
+          <div class="mt-4"><p><span class="font-bold text-2xl">About the Pose:</span> Corpse Pose is a classic yoga relaxation pose typically practiced at the end of a yoga session. It allows the body to rest and integrate the benefits of the practice while cultivating a state of deep relaxation and awareness.</p></div>
+        </div>
+        <div>
+          <img class="w-[600px] rounded-3xl ml-10 mt-3 border border-black h-[350px]" src="Savasana-Pose.webp">
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-3xl pl-10 py-3 ">Instructions:</h1>
+      </div>
+      <div>
+        <ul class="text-xl ml-28 list-decimal">
+          <li>Lie on your back with your legs extended and feet hip-width apart. Allow your arms to rest alongside your body, with your palms facing up.</li>
+          <li>Close your eyes and take a few deep breaths, allowing your body to settle into the mat.
+          </li>
+          <li>Relax your entire body, releasing any tension in your muscles and softening your facial muscles.</li>
+          <li>Let go of any thoughts or worries, allowing your mind to become quiet and still.</li>
+          <li> Remain in this pose for 5-10 minutes, or longer if desired, focusing on your breath and allowing yourself to fully surrender to relaxation.</li>
+          <li> To release, gently deepen your breath and begin to slowly awaken your body, wiggling your fingers and toes and gently stretching your arms overhead.</li>
+          <li>Roll onto your right side and take a few moments to rest before slowly coming back to a seated position.</li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-[#C68484] rounded-3xl text-black py-10 hide mt-3">
+      <h1 class="font-bold text-4xl pl-5 underline">Cobra Pose (Bhujangasana)</h1>
+      <div class="grid grid-cols-2 gap-0">
+        <div>
+          <img class="w-[600px] rounded-3xl ml-10 mt-3 border border-black" src="cobra-pose.jpg">
+        </div>
+        <div class="flex flex-col text-xl pr-5">
+          <div class="mt-5"><p><span class="font-bold text-2xl">Benefits:</span> Strengthens the spine, shoulders, and arms. Opens the chest and lungs. Improves flexibility in the back muscles. Stimulates abdominal organs.</p></div>
+          <div class="mt-4"><p><span class="font-bold text-2xl">About the Pose:</span> Cobra Pose is a gentle backbend that helps to increase spinal flexibility and strengthen the back muscles. It is often practiced as part of a yoga sequence to counteract the effects of prolonged sitting and improve posture.</p></div>
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-3xl pl-10 py-3 ">Instructions:</h1>
+      </div>
+      <div>
+        <ul class="text-xl ml-28 list-decimal">
+          <li> Begin by lying on your stomach with your legs extended and the tops of your feet resting on the mat.</li>
+          <li> Place your palms on the mat underneath your shoulders, elbows close to your body.
+          </li>
+          <li> Press into your palms as you slowly lift your chest and head off the mat, keeping your elbows bent.</li>
+          <li> Lengthen your spine and draw your shoulders away from your ears, opening your chest forward.</li>
+          <li> Keep your gaze forward or slightly upward, avoiding straining your neck.</li>
+          <li>Hold the pose for 15-30 seconds, breathing deeply.</li>
+          <li>To release, exhale as you slowly lower your chest and head back down to the mat.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-[#C68484] rounded-3xl hide text-black py-10 mt-3">
+      <h1 class="font-bold text-4xl pl-5 underline">Seated Forward Bend (Paschimottanasana)</h1>
+      <div class="grid grid-cols-2 gap-0">
+        
+        <div class="flex flex-col text-xl pl-5">
+          <div class="mt-5"><p><span class="font-bold text-2xl">Benefits:</span>Stretches the spine, hamstrings, and calves. Calms the mind and relieves stress. Stimulates the abdominal organs and improves digestion.</p></div>
+          <div class="mt-4"><p><span class="font-bold text-2xl">About the Pose:</span> Seated Forward Bend is a calming yoga pose that stretches the entire back side of the body. It is often practiced as a gentle forward fold to promote relaxation and release tension in the spine and hamstrings.</p></div>
+        </div>
+        <div>
+          <img class="w-[600px] rounded-3xl ml-10 mt-3 border border-black h-[350px]" src="last-pose.jpeg">
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-3xl pl-10 py-3 ">Instructions:</h1>
+      </div>
+      <div>
+        <ul class="text-xl ml-28 list-decimal">
+          <li>Begin by sitting on the mat with your legs extended in front of you and your feet flexed.</li>
+          <li>Inhale as you lengthen your spine, reaching your arms overhead.
+          </li>
+          <li>Exhale as you hinge at the hips and fold forward from the waist, leading with your chest.</li>
+          <li>Reach your hands towards your feet or shins, keeping your spine straight.</li>
+          <li> Keep your neck in line with your spine and avoid rounding your back.</li>
+          <li> Hold the pose for 30-60 seconds, breathing deeply into the stretch.</li>
+          <li>To release, inhale as you slowly rise back up to a seated position.
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+    
+
+
+
+    <section id="footer">
+      <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h5>Quick links</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a href="index.html"><i class="fa fa-angle-double-right"></i>Home</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h5>Quick links</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>X</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Instagram</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Facebook</a></li>
+              <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Discord</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        
+          <hr>
+        </div>  
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+            
+            <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">FIT-AMIGO</a></p>
+          </div>
+          </hr>
+        </div>  
+      </div>
+    </section>
+ 
+    <script src="1.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      // Get the button and dropdown menu elements
+      const button = document.getElementById('menu-button');
+      const menu = document.querySelector('[role="menu"]');
+  
+      // Toggle the dropdown menu when the button is clicked
+      button.addEventListener('click', function() {
+          menu.classList.toggle('hidden');
+      });
+  
+      // Close the dropdown menu when clicking outside of it
+      document.addEventListener('click', function(event) {
+          if (!menu.contains(event.target) && !button.contains(event.target)) {
+              menu.classList.add('hidden');
+          }
+      });
+  });
+  
+    </script>
+    
+  </body>
+</html>
